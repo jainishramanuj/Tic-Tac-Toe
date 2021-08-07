@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+p{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 40px 300px 20px;
+    color: #fff;
+    background-color: #753422;
+    padding: 5px;
+    border-radius: 500px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#app {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: #753422;
+    border-radius: 500px;
+    margin-bottom: 20px;
+    padding: 0 15px 0;
+    font-weight: bold;
+}
+
+.header > * {
+    color: #eeeeee;
+}
+.header__turn {
+    padding: 12px;
+}
+.header__status {
+    padding: 12px;
+    flex-grow: 1;
+    text-align: center;
+}
+.header__restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* bord class */
+.board {
+    display: grid;
+    background: #F85F73;
+    border-radius: 20px;
+    padding: 10px;
+    gap: 10px;
+    flex-grow: 1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.board__tile {
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    font-weight: bold;
+    color: #283C63;
+    font-family: cursive;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.board__tile:hover{
+    background-color: #ddd; 
+    border-radius: 50%;
+}
+.board__tile--winner {
+    color: green;
+}
